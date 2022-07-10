@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './componets/shared/header/header.component';
-import { FooterComponent } from './componets/shared/footer/footer.component';
-import { NavComponent } from './componets/shared/nav/nav.component';
-import { BookstoreAppComponent } from './componets/bookstore-app/bookstore-app.component';
-import { FiltersComponent } from './componets/bookstore-app/filters/filters.component';
-import { ProductListComponent } from './componets/bookstore-app/product-list/product-list.component';
-import { ProductItemComponent } from './componets/bookstore-app/product-list/product-item/product-item.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { BooksService } from './componets/bookstore-app/product-list/product-list.componet.service';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { NavComponent } from './components/shared/nav/nav.component';
+import { BookCartComponent } from './components/book-cart/book-cart.component';
+import { ProductListComponent } from './components/book-cart/product-list/product-list.component';
+import { FiltersComponent } from './components/book-cart/filters/filters.component';
+
+import { ProductItemComponent } from './components/book-cart/product-list/product-item/product-item.component';
+import { HttpClientModule } from '@angular/common/http';
+import {BooksService} from './components/book-cart/product-list/product-list.service';
 
 @NgModule({
   declarations: [
@@ -19,15 +20,15 @@ import { BooksService } from './componets/bookstore-app/product-list/product-lis
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    BookstoreAppComponent,
-    FiltersComponent,
+    BookCartComponent,
     ProductListComponent,
+    FiltersComponent,
     ProductItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]
